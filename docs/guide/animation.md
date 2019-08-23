@@ -16,7 +16,7 @@ ZKTween is a simple and lightweight animation tool. See the documentation for it
 ### Features
 * Does one thing and one thing only: tween properties
 * Very simple to use, but it can achieve a lot of effects
-* Easing functions are reusable outside of Tween
+* Easing functions are reusable outside of Tween.
 
 ### About ease function
 <img :src="$withBase('/images/ease.png')" alt="">
