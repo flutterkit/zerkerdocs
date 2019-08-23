@@ -6,11 +6,13 @@
   "scripts": {
     "start": "vuepress dev docs",
     "build": "vuepress build docs",
+    "pub": "node ./docs/script.js",
     "serve": "serve ./"
   },
   "author": "zerker",
   "license": "MIT",
   "dependencies": {
+    "mv": "^2.1.1",
     "serve": "^11.1.0"
   }
 }

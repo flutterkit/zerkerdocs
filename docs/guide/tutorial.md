@@ -14,7 +14,7 @@ In this example, we take the praise animation as an example.
 
 ---
 
-## Make a simple game
+## Make a simple game  
 
 
 ---
@@ -23,7 +23,7 @@ In this example, we take the praise animation as an example.
 
 ---
 
-## Components communication
+## Components  communication
 
 You can use `ZKBus` to implement component communication for any Zerker component. Use it to even communicate between flutter native widgets and zerker elements.
 
