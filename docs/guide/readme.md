@@ -1,0 +1,81 @@
+---
+sidebarDepth: 1
+---
+
+# Introduction
+
+## What is Zerker
+
+Zerker is a flexible and lightweight flutter canvas graphic animation library.
+
+With Zerker, you can create a lot of seemingly cumbersome animation effects, such as animated animations, pop-up animations, scene transitions, icon effects, and more.
+
+At the same time, you can create a lot of simple games with Zerker. Zerker contains elements such as sprites, scrolling backgrounds, and atlases, making it easy to create game worlds with them.
+
+<img :src="$withBase('/images/phone.jpeg')" alt="">
+
+CODE:
+
+```dart
+Altas fire = await ZKAssets.loadAltas(
+  key: "fire", 
+  json: "assets/a.json", 
+  image: "assets/fire.png"
+);
+
+Altas ball = await ZKAssets.loadImage(
+  key: "ball",  
+  image: "assets/ball.png"
+);
+
+ZKAssets.loadAssets(
+  urls: ["a.png", "b.png", ...],
+  baseUrl: "assets/",
+  onLoad: (){
+    ...
+  }
+);
+```
+
+<img :src="$withBase('/images/fp.png')" alt="">
+
+---
+
+## Install
+
+### Use this package as a library
+#### 1. Depend on it
+Add this to your package's pubspec.yaml file:
+
+```yaml
+dependencies:
+  zerker: ^1.0.1
+```
+
+#### 2. Install it
+You can install packages from the command line:
+with Flutter:
+
+```shell
+$ flutter pub get
+```
+
+Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
+
+#### 3. Import it
+Now in your Dart code, you can use:
+
+```dart
+import 'package:zerker/zerker.dart';
+```
+
+---
+
+## Start a simple demo
+
+Zerker is great for making some action-packed effects, such as awesome animations, love animations, pop-up animations or meteor shower backgrounds.
+
+In this example, we take the praise animation as an example.
+
+#### 1. ui layout
+<img :src="$withBase('/images/flutter.jpg')" alt="">
