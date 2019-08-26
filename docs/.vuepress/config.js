@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Zerker',
+  
   locales: {
     '/': {
       lang: 'en-US',
@@ -10,6 +11,7 @@ module.exports = {
   dest: "./dist",
   serviceWorker: {},
   themeConfig: {
+    logo: '/images/mini-logo.png',
     repo: 'flutterkit/zerker',
     lastUpdated: 'Last Updated',
     editLinks: true,

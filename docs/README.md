@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/bg.png
+heroImage: /images/top.png
 actionText: Get started
 actionLink: /guide/
 features:
