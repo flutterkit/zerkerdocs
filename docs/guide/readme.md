@@ -12,7 +12,7 @@ With Zerker, you can create a lot of seemingly cumbersome animation effects, suc
 
 At the same time, you can create a lot of simple games with Zerker. Zerker contains elements such as sprites, scrolling backgrounds, and atlases, making it easy to create game worlds with them.
 
-<img :src="$withBase('/images/phone.jpeg')" alt="">
+<img :src="$withBase('/images/fp.png')" alt="">
 
 ---
 
@@ -45,9 +45,9 @@ import 'package:zerker/zerker.dart';
 ```
 
 ###### More detailed installation steps, you can refer to here. [https://pub.dev/packages/zerker#-installing-tab-](https://pub.dev/packages/zerker#-installing-tab-)
-  
+</br>
 
-<img :src="$withBase('/images/fp.png')" alt="">
+<img :src="$withBase('/images/wallpaper/07.jpg')" alt="">
 
 ---
 

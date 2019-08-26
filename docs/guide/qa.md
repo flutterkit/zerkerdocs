@@ -8,8 +8,9 @@ sidebarDepth: 1
 No, Zerker is an easy-to-use canvas graphics animation library.
 With it you can easily create a lot of animations, such as app admission animation, like animation, scene switching, pop-up effects, text animation, etc.
 
+<img :src="$withBase('/images/wallpaper/01.jpg')" alt="">
+<br>
 <img :src="$withBase('/images/effect.gif')" alt="">
-
 
 ---
 
@@ -64,3 +65,5 @@ Setting up full screen is easy, you can refer to this article.
 It’s really a bit busy recently, of course I will try to continue optimizing zerker. If you are interested in zerker, you are welcome to join the development of `flutterkit`.
 
 In addition, I also thought of another very interesting project. I want to name it `c2f` for now. It can convert css style to flutter style, I think there will be web developers like it. [https://github.com/flutterkit/c2f](https://github.com/flutterkit/c2f)
+
+<img :src="$withBase('/images/wallpaper/06.jpg')" alt="">

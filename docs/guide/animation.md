@@ -9,6 +9,8 @@ An application or game is of course inseparable from a variety of animation effe
 Use ZKTween to create easing animations such as displacement and zoom.
 Use Animator to precisely control sequence frame animations and implement sprite animations.
 
+<img :src="$withBase('/images/ball.png')" alt="">
+
 ## About ZKTween
 
 ZKTween is a simple and lightweight animation tool. See the documentation for it [ZKTween Docs](/api/tween.html#zktween).
