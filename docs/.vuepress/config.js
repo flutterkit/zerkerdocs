@@ -29,7 +29,7 @@ module.exports = {
         nav: [
           { text: 'Guide', link: '/guide/' },
           { text: 'API', link: '/api/node/' },
-          { text: 'Installing', link: 'https://pub.dev/packages/tweener#-installing-tab-' },
+          { text: 'Installing', link: 'https://pub.dev/packages/zerker#-installing-tab-' },
           { text: 'Changelog', link: 'https://github.com/flutterkit/zerker' },
         ],
         sidebar: {
