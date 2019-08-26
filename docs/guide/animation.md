@@ -153,6 +153,9 @@ ZKSprite sprite = ZKSprite(key: "dino")
 It is recommended that you use the following tools to make two kinds of materials.
 
 * [http://free-tex-packer.com/](http://free-tex-packer.com/)
+* [https://www.codeandweb.com/free-sprite-sheet-packer](https://www.codeandweb.com/free-sprite-sheet-packer)
+* [https://amakaseev.github.io/sprite-sheet-packer/](https://amakaseev.github.io/sprite-sheet-packer/)
+* [http://www.spriteland.com/apps/spritemaker.html](http://www.spriteland.com/apps/spritemaker.html)
 
 <img :src="$withBase('/images/packer.jpeg')" alt="">
 <img :src="$withBase('/images/ftp.png')" alt="">
