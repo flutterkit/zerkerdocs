@@ -14,31 +14,6 @@ At the same time, you can create a lot of simple games with Zerker. Zerker conta
 
 <img :src="$withBase('/images/phone.jpeg')" alt="">
 
-CODE:
-
-```dart
-Altas fire = await ZKAssets.loadAltas(
-  key: "fire", 
-  json: "assets/a.json", 
-  image: "assets/fire.png"
-);
-
-Altas ball = await ZKAssets.loadImage(
-  key: "ball",  
-  image: "assets/ball.png"
-);
-
-ZKAssets.loadAssets(
-  urls: ["a.png", "b.png", ...],
-  baseUrl: "assets/",
-  onLoad: (){
-    ...
-  }
-);
-```
-
-<img :src="$withBase('/images/fp.png')" alt="">
-
 ---
 
 ## Install
@@ -49,7 +24,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  zerker: ^1.0.1
+  zerker: <latest_version_here>
 ```
 
 #### 2. Install it
@@ -69,13 +44,100 @@ Now in your Dart code, you can use:
 import 'package:zerker/zerker.dart';
 ```
 
+###### More detailed installation steps, you can refer to here. [https://pub.dev/packages/zerker#-installing-tab-](https://pub.dev/packages/zerker#-installing-tab-)
+  
+
+<img :src="$withBase('/images/fp.png')" alt="">
+
 ---
 
-## Start a simple demo
+## Quick start
 
-Zerker is great for making some action-packed effects, such as awesome animations, love animations, pop-up animations or meteor shower backgrounds.
+### Import the package
+```
+import 'package:zerker/zerker.dart';
+```
 
-In this example, we take the praise animation as an example.
+### Useage
 
-#### 1. ui layout
+#### Create a zerker widget
+
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'The Zerker Demo',
+              ),
+              Container(
+                color: Colors.amber[600],
+                width: 360.0,
+                height: 360.0,
+                child: Zerker(app: MyZKApp()),
+              ),
+            ],
+          ),
+        ));
+  }
+}
+```
+
+#### Create your Zerker class inherited from ZKApp
+
+```dart
+class MyZKApp extends ZKApp {
+  @override
+  bool interactive = true;
+
+  @override
+  bool clip = true;
+
+  @override
+  init() {
+    super.init();
+    /// init zerker scene
+  }
+
+  @override
+  update(int time) {
+    super.update(time);
+  }
+}
+```
+
+#### Initialize the scene and create elements in the `init function`
+
+```dart
+/// Create a zerker sprite
+ZKSprite bigboy = ZKSprite(key: "bigboy")
+  ..position.x = size.width / 2
+  ..position.y = size.height / 2
+  ..animator.make("front", [0, 1, 2, 3, 4])
+  ..animator.make("left", ['5-9'])
+  ..animator.make("after", ['10-14'])
+  ..animator.make("right", ['15-19'])
+  ..onTapDown = (event) {
+    bigboy.animator.play("right", 8, true);
+   };
+   
+stage.addChild(bigboy);
+
+/// Create a zerker text
+ZKText text = ZKText()
+  ..setPosition(100, 100)
+  ..text = "hello world"
+  ..setStyle(color: Colors.blueGrey, backgroundColor: Colors.red[50]);
+  
+stage.addChild(_text);
+```
+
 <img :src="$withBase('/images/flutter.jpg')" alt="">
+

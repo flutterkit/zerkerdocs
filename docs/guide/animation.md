@@ -25,6 +25,7 @@ ZKTween is a simple and lightweight animation tool. See the documentation for it
 
 #### ZKTween has two ways of using
 * control position
+
 ```dart
 ZKTween(text.position)
 	.to({"x": event.dx, "y": event.dy}, 2000)
@@ -95,7 +96,8 @@ Sequence frame animation relies on textures. Currently, Zerker supports two gene
 You can use the tools provided in another tutorial to create two types of textures.  
 
 <img :src="$withBase('/images/altas.webp')" alt="">
-```
+
+```json
 "Apple.png": {
     "frame": {"x":292,"y":304,"w":60,"h":61},
     "rotated": false,

@@ -9,6 +9,8 @@ No, Zerker is an easy-to-use canvas graphics animation library.
 With it you can easily create a lot of animations, such as app admission animation, like animation, scene switching, pop-up effects, text animation, etc.
 
 <img :src="$withBase('/images/effect.gif')" alt="">
+
+
 ---
 
 ## About sound
@@ -57,40 +59,8 @@ Setting up full screen is easy, you can refer to this article.
 
 ---
 
-## How to manage assets
+## Next to do
 
-Regarding assets, I recommend you read this article.
-[https://flutter.dev/docs/development/ui/assets-and-images](https://flutter.dev/docs/development/ui/assets-and-images)
+It’s really a bit busy recently, of course I will try to continue optimizing zerker. If you are interested in zerker, you are welcome to join the development of `flutterkit`.
 
-In Zerker, you can preload in advance or load instantly.
-
-```dart
-Map urls = {
-	"dot": "assets/dot.png",
-	"json": "assets/data.json",
-	"cloud": "assets/cloud.png",
-	"enemy": {"json": "assets/altas1.json", "image": "assets/altas1.png"},
-	"jump": {"image": "assets/jumpsheet.png", "width": 32, "height": 32},
-}
-
-var onProgress = (scale){
-	print("Current loading progress $scale");
-	progressLine.scaleX = 10 * scale;
-};
-
-ZKAssets.preload(urls:urls , parallel:6, onLoad: onLoad, onProgress: onProgress);
-
-...
-
-ZKImage dot = ZKImage(key: dot);
-ZKSprite enemy = ZKSprite(key: enemy);
-var json = ZKAssets.getAsset("json");
-```
-
-```dart
-ZKSprite enemy = ZKSprite("json": "assets/altas1.json", "image": "assets/altas1.png");
-enemy.onLoad = ...
-
-ZKSprite abc = ZKSprite(image: "assets/abc.png");
-abc.onLoad = ...
-```
+In addition, I also thought of another very interesting project. I want to name it `c2f` for now. It can convert css style to flutter style, I think there will be web developers like it. [https://github.com/flutterkit/c2f](https://github.com/flutterkit/c2f)
