@@ -6,10 +6,10 @@ actionLink: /guide/
 features:
   - title: Simple and lightweight
     details: Using Zerker is very simple, it has very simple api and operation methods, anyone can quickly learn to use, and you will also like Zerker.
-  - title: Various scenes
-    details: Zerker can be used in a variety of scenarios. You can use it to create opening animations, like small animations, and a variety of small games.
-  - title: Animation
-    details: You can use ZKTween to implement various easing animations, using sprite.frames to implement frame animation.
+  - title: Various animation effects
+    details: Use Zerker to achieve a variety of animation effects, such as the like effect, admission animation, pop-up effect, etc.
+  - title: Develop 2d games
+    details: Zerker is also very good at developing games, supporting spritesheets, atals and many other assets, making it easy to create a variety of small games.
 
 footer: MIT Licensed | Copyright © 2019-present
 ---
@@ -26,31 +26,35 @@ At the same time, you can create a lot of simple games with Zerker. Zerker conta
 ## Getting Started
 
 ```dart
-class _MyHomePageState extends State<MyHomePage> {
+class MyZKApp extends ZKApp {
+  ZKNode _node;
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: Center(
-          child: Container(
-            color: Colors.amber[600],
-            width: 350.0,
-            height: 350.0,
-            child: Zerker(app: MyZKApp()),
-          ),
-        ));
+  bool interactive = true;
+
+  @override
+  bool clip = true;
+
+  @override
+  init() {
+    super.init();
+    /// 
+  }
+
+  @override
+  update(int time) {
+    super.update(time);
+  }
+
+  @override
+  customDraw(Canvas canvas) {}
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }
-
-class MyZKApp extends ZKApp {
-  ZKNode node1;
-  ZKNode node2;
-  ZKText text;
-  ZKImage img;
-  ZKGraphic graphic;
 ```
 
-## Your Opinion
-If you have any feedback on Zerker, please feel free to send it via Twitter or email! Thank you very much for your interest in Zerker.😊
+## License
+Zerker is licensed under MIT license. View license. [https://github.com/flutterkit/zerker/blob/master/LICENSE](https://github.com/flutterkit/zerker/blob/master/LICENSE)
