@@ -138,3 +138,27 @@ ZKSprite abc = ZKSprite(image: "assets/abc.png");
 abc.onLoad = ...
 ```
 
+---
+
+## Set size and full screen
+
+
+```dart
+return Scaffold(
+    appBar: AppBar(
+      title: Text(widget.title),
+    ),
+    body: Center(
+      	child: Container(
+    	color: Colors.amber[600],
+        width: 350.0,
+        height: 350.0,
+        child: Zerker(app: MyZKApp()),
+    	),
+    ));
+```
+  
+Setting up full screen is easy, you can refer to this article.
+[http://developine.com/flutter-full-screen-splash-screen-tutorial/](http://developine.com/flutter-full-screen-splash-screen-tutorial/)
+
+

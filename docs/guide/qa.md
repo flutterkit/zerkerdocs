@@ -37,26 +37,13 @@ Regarding particle animation, I have a plan to port the Proton library to flutte
 
 ---
 
-## Set size and full screen
+## About source code style
 
+Because I originally wanted to create a multi-language common framework, so I don’t use a lot of dart syntactic sugar in zerker.
 
-```dart
-return Scaffold(
-    appBar: AppBar(
-      title: Text(widget.title),
-    ),
-    body: Center(
-      	child: Container(
-    	color: Colors.amber[600],
-        width: 350.0,
-        height: 350.0,
-        child: Zerker(app: MyZKApp()),
-    	),
-    ));
-```
-  
-Setting up full screen is easy, you can refer to this article.
-[http://developine.com/flutter-full-screen-splash-screen-tutorial/](http://developine.com/flutter-full-screen-splash-screen-tutorial/)
+I think one day maybe he can transplant to unity or other places very quickly.
+
+Of course, I very much welcome you to join the development of zerker.
 
 ---
 

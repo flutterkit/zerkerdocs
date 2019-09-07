@@ -59,5 +59,10 @@ module.exports = {
         }
       }
     }
-  }
+  },
+
+  head: [
+    ['script', { src: '/jquery.min.js' }],
+    ['script', { src: '/main.js' }],
+  ],
 };

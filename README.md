@@ -9,6 +9,9 @@
 npm start
 ```
 
+## Edit content
+Go to the `docs` folder and edit the corresponding markdown file. There is a corresponding material file under `.vuepress`
+
 ## Building projects
 
 ```javascript

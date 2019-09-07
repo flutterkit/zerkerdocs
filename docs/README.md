@@ -21,6 +21,8 @@ Zerker is a flexible and lightweight flutter canvas graphic animation library.
 
 With Zerker, you can create a lot of seemingly cumbersome animation effects, such as animated animations, pop-up animations, scene transitions, icon effects, and more.
 
+<img align=center :src="$withBase('/images/fp.png')" alt="">
+
 At the same time, you can create a lot of simple games with Zerker. Zerker contains elements such as sprites, scrolling backgrounds, and atlases, making it easy to create game worlds with them.
 
 ## Getting Started
