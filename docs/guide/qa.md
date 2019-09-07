@@ -45,6 +45,8 @@ I think one day maybe he can transplant to unity or other places very quickly.
 
 Of course, I very much welcome you to join the development of zerker.
 
+<img :src="$withBase('/images/wallpaper/08.jpg')" alt="">
+
 ---
 
 ## Next to do
