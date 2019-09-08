@@ -65,6 +65,92 @@ Remember, the event listener is also destroyed when dispose the zerker app.
 
 ---
 
+## Preload and Assets management
+
+Regarding assets, I recommend you read this article.
+[https://flutter.dev/docs/development/ui/assets-and-images](https://flutter.dev/docs/development/ui/assets-and-images)
+
+<img :src="$withBase('/images/loading.jpg')" alt="">
+
+#### Note: Preloading in zerker is not required. Of course, if you want to do this, you can use the following method.
+
+
+```dart
+Map urls = {
+  "dot": "assets/dot.png",
+  "json": "assets/data.json",
+  "cloud": "assets/cloud.png",
+  "enemy": {"json": "assets/altas1.json", "image": "assets/altas1.png"},
+  "jump": {"image": "assets/jumpsheet.png", "width": 32, "height": 32},
+}
+
+var onProgress = (scale){
+  print("Current loading progress $scale");
+  progressLine.scaleX = 10 * scale;
+};
+
+ZKAssets.preload(urls:urls , parallel:6, onLoad: onLoad, onProgress: onProgress);
+
+...
+
+/// use Assets
+ZKImage dot = ZKImage(key: "dot");
+ZKSprite enemy = ZKSprite(key: "enemy");
+var json = ZKAssets.getAsset("json");
+```
+
+Of course you can also use the method of instant loading.
+
+```dart
+ZKSprite enemy = ZKSprite("json": "assets/altas1.json", "image": "assets/altas1.png");
+enemy.onLoad = ...
+
+ZKSprite abc = ZKSprite(image: "assets/abc.png");
+abc.onLoad = ...
+```
+
+---
+
+## How to add interaction
+
+Adding interactions in zerker is easy. 
+
+> Currently supported events are `onTapDown` `onTapUp`, please let me know if you need other events, maybe they will join them later.
+
+* 1. Open the global interactive switch
+
+```dart
+Zerker(
+  app: MyZKApp()
+  interactive : true
+  ),
+```
+
+* 2. Add click events to specific elements
+```dart
+sprite = ZKSprite(key: "boy")
+  ..onTapDown = (event) {
+    print("click");
+  };
+```
+
+* 3. If you want to add a global click, add it on the stage.
+```dart
+stage.onTapDown = (event) {
+  print("stage click");
+};
+```
+
+* 4. Sometimes to save performance and improve performance, we also turn off the switch in the scene that does not require interactive elements.
+
+```dart
+node.interactive = false;
+rect.interactive = false;
+circle.interactive = false;
+```
+
+---
+
 ## Some random functions
 
 #### random color
@@ -90,52 +176,6 @@ node.y = pos.y;
 double r = getRandomA2B(0, 100);
 node.x = r;
 node.y = r;
-```
-
----
-
-## Preload and Assets management
-
-Regarding assets, I recommend you read this article.
-[https://flutter.dev/docs/development/ui/assets-and-images](https://flutter.dev/docs/development/ui/assets-and-images)
-
-<img :src="$withBase('/images/loading.jpg')" alt="">
-
-#### Note: Preloading in zerker is not required. Of course, if you want to do this, you can use the following method.
-
-
-```dart
-Map urls = {
-	"dot": "assets/dot.png",
-	"json": "assets/data.json",
-	"cloud": "assets/cloud.png",
-	"enemy": {"json": "assets/altas1.json", "image": "assets/altas1.png"},
-	"jump": {"image": "assets/jumpsheet.png", "width": 32, "height": 32},
-}
-
-var onProgress = (scale){
-	print("Current loading progress $scale");
-	progressLine.scaleX = 10 * scale;
-};
-
-ZKAssets.preload(urls:urls , parallel:6, onLoad: onLoad, onProgress: onProgress);
-
-...
-
-/// use Assets
-ZKImage dot = ZKImage(key: "dot");
-ZKSprite enemy = ZKSprite(key: "enemy");
-var json = ZKAssets.getAsset("json");
-```
-
-Of course you can also use the method of instant loading.
-
-```dart
-ZKSprite enemy = ZKSprite("json": "assets/altas1.json", "image": "assets/altas1.png");
-enemy.onLoad = ...
-
-ZKSprite abc = ZKSprite(image: "assets/abc.png");
-abc.onLoad = ...
 ```
 
 ---

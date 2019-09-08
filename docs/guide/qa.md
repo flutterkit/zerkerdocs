@@ -45,7 +45,14 @@ I think one day maybe he can transplant to unity or other places very quickly.
 
 Of course, I very much welcome you to join the development of zerker.
 
-<img :src="$withBase('/images/wallpaper/08.jpg')" alt="">
+```dart
+this.id = Util.uuid();
+this.position = new Point(0.0, 0.0);
+this.anchor = new Point(0.5, 0.5);
+this.scale = new Point(1.0, 1.0);
+this.skew = new Point(0.0, 0.0);
+this.matrix = new Matrix();
+```
 
 ---
 
