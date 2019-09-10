@@ -29,27 +29,29 @@ At the same time, you can create a lot of simple games with Zerker. Zerker conta
 
 ```dart
 class MyZKApp extends ZKApp {
-  ZKNode _node;
-
-  @override
-  bool interactive = true;
-
-  @override
-  bool clip = true;
+  ZKSprite _sprite;
 
   @override
   init() {
     super.init();
-    /// 
+
+    _sprite = ZKSprite(key: "boy")
+      ..animator.make("run", ["Run ({1-15}).png"])
+      ..animator.play("run", 25, true);
+    stage.addChild(boy);
   }
 
   @override
   update(int time) {
     super.update(time);
+    
+    _sprite.position.x++;
   }
 
   @override
-  customDraw(Canvas canvas) {}
+  customDraw(Canvas canvas) {
+    /// custom draw method
+  }
 
   @override
   void dispose() {

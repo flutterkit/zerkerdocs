@@ -73,20 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'The Zerker Demo',
-              ),
-              Container(
-                color: Colors.amber[600],
-                width: 360.0,
-                height: 360.0,
-                child: Zerker(app: MyZKApp()),
-              ),
-            ],
-          ),
+          child: Zerker(app: MyZKApp(), clip: true, interactive: true, width: 350, height: 350),
         ));
   }
 }
@@ -96,11 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ```dart
 class MyZKApp extends ZKApp {
-  @override
-  bool interactive = true;
-
-  @override
-  bool clip = true;
 
   @override
   init() {
