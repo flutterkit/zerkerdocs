@@ -130,17 +130,23 @@ You're done
 
 ---
 
-## Implement a click animation
+## Make a simple game  
 
-Zerker is great for making some action-packed effects, such as awesome animations, love animations, pop-up animations or meteor shower backgrounds.
+In this example we will learn how to make a simple game. The zerker is great for small game development and you will find it really that simple.
 
-In this example, we take the praise animation as an example.
+#### Notice: Recent improvements in content... 
 
-### Quick start
+<br>
+<img :src="$withBase('/images/wallpaper/04.jpg')" alt="">
 
 ---
 
-## Make a simple game  
+## More examples
 
-<img :src="$withBase('/images/wallpaper/04.jpg')" alt="">
+More zerker examples you can view here [https://github.com/flutterkit/zerker-samples](https://github.com/flutterkit/zerker-samples)
+
+<img :src="$withBase('/images/example/basic_demo.gif')" alt="">
+
+If you are interested in zerker then you are welcome to provide a better example for me.
+
 ---
