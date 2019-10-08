@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "build": "rm -rf ./dist && vuepress build docs",
     "pub": "node ./script.js",
     "serve": "serve ./"
   },

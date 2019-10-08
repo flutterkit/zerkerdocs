@@ -1,8 +1,13 @@
-var path = require("path");
-var fs = require("fs-extra");
+const fs = require("fs-extra");
+const { promisify } = require("util");
 
-fs.copy("./dist", "./", err => {
-  if (err) return console.error(err);
+const fsCopy = promisify(fs.copy);
+const fsRemove = promisify(fs.remove);
 
-  console.log("success!");
-});
+main();
+
+async function main() {
+  await fsRemove("./assets");
+  await fsCopy("./dist", "./");  
+  console.log("run script success!");
+}

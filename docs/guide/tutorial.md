@@ -145,7 +145,7 @@ In this example we will learn how to make a simple game. The zerker is great for
 
 More zerker examples you can view here [https://github.com/flutterkit/zerker-samples](https://github.com/flutterkit/zerker-samples)
 
-<img :src="$withBase('/images/example/basic_demo.gif')" alt="">
+<img :src="$withBase('/images/example/example4.gif')" alt="">
 
 If you are interested in zerker then you are welcome to provide a better example for me.
 
