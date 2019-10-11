@@ -138,7 +138,6 @@ In this example we will learn how to make a simple game. The zerker is great for
 
 <br>
 <img :src="$withBase('/images/wallpaper/04.jpg')" alt="">
-<img :src="$withBase('/images/blank.png')" alt="">
 
 ---
 
