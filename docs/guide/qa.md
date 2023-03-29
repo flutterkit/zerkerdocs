@@ -28,12 +28,8 @@ await audioPlayer.stop();
 ## About physics and particles
 
 There is already a dart version of box2d, although I have not used it.
-[https://github.com/google/box2d.dart](https://github.com/google/box2d.dart)
-
-Regarding particle animation, I have a plan to port the Proton library to flutter if I have time. 
-[https://github.com/a-jie/Proton](https://github.com/a-jie/Proton)  
-
-<img :src="$withBase('/images/p.png')" alt="">
+[https://github.com/google/box2d.dart](https://github.com/google/box2d.dart) and
+[https://github.com/tnantoka/flutter_box2d](https://github.com/tnantoka/flutter_box2d)
 
 ---
 
